@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class MahasiswaController extends Controller
 {
@@ -21,7 +22,16 @@ class MahasiswaController extends Controller
 
     public function create(Request $request)
     {
-        \App\Models\Mahasiswa::create($request->all());
+        $user = new \App\Models\User;
+        $user->role = 'mahasiswa';
+        $user->name = $request->nama_depan;
+        $user->email = $request->email;
+        $user->password = bcrypt('secret');
+        $user->remember_token = Str::random(60);
+        $user->save();
+
+        $request->request->add(['user_id' => $user->id]);
+        $mahasiswa = \App\Models\Mahasiswa::create($request->all());
         return redirect('/mahasiswa')->with('sukses','Data berhasil ditambahkan');
     }
 

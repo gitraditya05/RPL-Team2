@@ -20,7 +20,6 @@
                                             <th>Nama Depan</th>
                                             <th>Nama Belakang</th>
                                             <th>Jenis Kelamin</th>
-                                            <th>Agama</th>
                                             <th>Jurusan</th>
                                             <th>Aksi</th>
                                         </tr>
@@ -32,7 +31,6 @@
                                                 <td>{{$mhs->nama_depan}}</td>
                                                 <td>{{$mhs->nama_belakang}}</td>
                                                 <td>{{$mhs->jenis_kelamin}}</td>
-                                                <td>{{$mhs->agama}}</td>
                                                 <td>{{$mhs->jurusan}}</td>
                                                 <td>
                                                     <a href="/mahasiswa/{{$mhs->id}}/edit" class="btn btn-warning btn-sm">Edit</a>
@@ -55,46 +53,50 @@
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
     <div class="modal-content">
-    <div class="modal-header">
-    <h5 class="modal-title" id="exampleModalLabel">Input Data</h5>
-    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-    </button>
-    </div>
-    <div class="modal-body">
-        <form action="/mahasiswa/create" method="POST">
-            {{ csrf_field() }}
-            <div class="form-group">
-            <label for="exampleInputEmail1">Nama Depan</label>
-            <input name="nama_depan" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nama Depan">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-            </div>
-            <div class="form-group">
-            <label for="exampleInputPassword1">Nama Belakang</label>
-            <input name="nama_belakang" type="text" class="form-control" id="exampleInputPassword1" placeholder="Nama Belakang">
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlSelect1">Jenis Kelamin</label>
-                <select name="jenis_kelamin" class="form-control" id="exampleFormControlSelect1">
-                <option value="L">Laki-laki</option>
-                <option value="P">Perempuan</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Agama</label>
-                <input name="agama" type="text" class="form-control" id="exampleInputPassword1" placeholder="Agama">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Jurusan</label>
-                <input name="jurusan" type="text" class="form-control" id="exampleInputPassword1" placeholder="Jurusan">
-            </div>
-
-            </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-        </form>
+        <div class="modal-header">
+            <h3 class="modal-title" id="exampleModalLabel">Create Data Mahasiswa</h3>
+            {{-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button> --}}
+        </div>
+        <div class="modal-body">
+            <form action="/mahasiswa/create" method="POST">
+                {{ csrf_field() }}
+                {{-- <div class="form-group">
+                    <label for="exampleInputEmail1">NIM</label>
+                    <input name="nim" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="NIM">
+                </div> --}}
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Nama Depan</label>
+                    <input name="nama_depan" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nama Depan">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Nama Belakang</label>
+                    <input name="nama_belakang" type="text" class="form-control" id="exampleInputPassword1" placeholder="Nama Belakang">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Email</label>
+                    <input name="email" type="email" class="form-control" id="exampleInputPassword1" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Jenis Kelamin</label>
+                    <select name="jenis_kelamin" class="form-control" id="exampleFormControlSelect1">
+                    <option value="L">Laki-laki</option>
+                    <option value="P">Perempuan</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Jurusan</label>
+                    <input name="jurusan" type="text" class="form-control" id="exampleInputPassword1" placeholder="Jurusan">
+                    <small id="emailHelp" class="form-text text-muted">isi tanpa singkatan serta huruf kapital diawal kata, cth: 'Ilmu Komputer'.</small>
+                </div>
+            
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-primary">Create</button>
+            </form>
+        </div>
     </div>
     </div>
     </div>

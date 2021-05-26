@@ -8,6 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Mahasiswa extends Model
 {
     use HasFactory;
+
     protected $table = 'mahasiswa';
-    protected $fillable = ['nama_depan', 'nama_belakang', 'jenis_kelamin', 'agama', 'jurusan'];
+    protected $fillable = ['nama_depan', 'nama_belakang', 'jenis_kelamin', 'jurusan', 'user_id'];
+    
+    public function matkul()
+    {
+        return $this->belongsToMany(Matkul::class);
+    }
 }

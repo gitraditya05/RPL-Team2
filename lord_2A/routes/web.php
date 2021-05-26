@@ -23,13 +23,16 @@ Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/postlogin', [AuthController::class, 'postlogin']);
 Route::get('/logout', [AuthController::class, 'logout']);
 
-Route::group(['middleware' => 'auth'], function(){
-    Route::get('/dashboard', [DashboardController::class, 'index']);
+Route::group(['middleware' => ['auth','checkRole:admin']], function(){
     Route::get('/mahasiswa', [MahasiswaController::class, 'index']);
     Route::post('/mahasiswa/create', [MahasiswaController::class, 'create']);
     Route::get('/mahasiswa/{id}/edit', [MahasiswaController::class, 'edit']);
     Route::post('/mahasiswa/{id}/update', [MahasiswaController::class, 'update']);
     Route::get('/mahasiswa/{id}/delete', [MahasiswaController::class, 'delete']);
+});
+
+Route::group(['middleware' => ['auth','checkRole:admin,mahasiswa']], function(){
+    Route::get('/dashboard', [DashboardController::class, 'index']);
 });
 
 
