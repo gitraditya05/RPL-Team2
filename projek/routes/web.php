@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MatkulController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ForumController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,3 +21,4 @@ Route::group(['middleware' => 'auth'], function(){
     Route::post('/matkul/{kode}/update', [MatkulController::class, 'update']);
 });
 
+Route::get('/forum', [ForumController::class, 'index']);
