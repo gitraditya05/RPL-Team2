@@ -10,4 +10,5 @@ class Matkul extends Model
     use HasFactory;
 
     protected $table = 'matkul';
+    protected $fillable = ['kode','nama','sks','semester','prasyarat','deskripsi'];
 }

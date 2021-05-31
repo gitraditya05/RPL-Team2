@@ -1,4 +1,6 @@
 @extends('layouts.master')
+@extends('matkul.create')
+@extends('matkul.edit')
 
 @section('matakuliah')
     active
@@ -8,6 +10,9 @@
 <div class="main">
     <div class="main-content">        
         <div class="container-fluid">
+            @if (session('sukses'))
+            <a href="#" class="notification-item"><span class="dot bg-success"></span>Data Berhasil ditambah</a>
+            @endif
             <div class="row">
                 <div class="col-md-12">
                     <div class="input-group">
@@ -16,28 +21,30 @@
                     </div>     
                     <div class="panel">  
                         <div class="panel-heading">
-                            <h3 class="panel-title">Data Matakuliah</h3>
+                            <h3 class="panel-title">Matakuliah</h3>
+                            <div class="right">
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn" data-toggle="modal" data-target="#createModal">
+                                <i class="lnr lnr-file-add"></i></button>
+                            </div>
                         </div>
                         <div class="panel-body">
-                            <table class="table table-hover">
-                                <thead>
-                                    <th>Kode</th>
-                                    <th>Nama</th>
-                                    <th>Aksi</th>
-                                </thead>
-                                <tbody>
-                                    @foreach ($data_matkul as $d)
+                            @foreach ($data_matkul as $d)
+                            <div class="panel">
+                                <div class="col-md-12">
                                     <tr>
                                         <td>{{$d->kode}}</td>
                                         <td>{{$d->nama}}</td>
                                         <td>
-                                            <a href="button">Kunjungi</a>
-                                            <a href="button">Edit</a>
+                                            <div class="right">
+                                                <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editModal">Ubah</button>
+                                                <button type="button" class="btn btn-danger btn-sm">Hapus</button>                                       
+                                            </div>
                                         </td>
                                     </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
+                                </div>
+                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -46,6 +53,4 @@
     </div>  
 </div>
 @endsection
-
-
 

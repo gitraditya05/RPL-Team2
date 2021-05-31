@@ -18,4 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('/matkul', [MatkulController::class, 'index']);
+Route::post('/matkul/create', [MatkulController::class, 'create']);
+Route::get('/matkul/{kode}/edit', [MatkulController::class, 'edit']);
+Route::post('/matkul/{kode}/update', [MatkulController::class, 'update']);
 
