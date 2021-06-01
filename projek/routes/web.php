@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MatkulController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ForumController;
+use App\Http\Controllers\ProfilController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,3 +26,6 @@ Route::get('/forum', [ForumController::class, 'index']);
 Route::post('/forum/create', [ForumController::class, 'create']);
 Route::get('/forum/{forum}/view', [ForumController::class, 'view']);
 Route::post('/forum/{forum}/view', [ForumController::class, 'postkomentar']);
+
+Route::get('/profilsaya', [ProfilController::class, 'index']);
+Route::post('/profilsaya', [ProfilController::class, 'update']);
