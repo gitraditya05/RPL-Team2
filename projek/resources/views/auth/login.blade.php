@@ -36,12 +36,12 @@
 							<form class="form-auth-small" action="/postlogin" method="POST">
                                 {{ csrf_field() }}
 								<div class="form-group">
-									<label for="signin-email" class="control-label sr-only">NIM</label>
-									<input name="nim" type="text" class="form-control" id="signin-email" placeholder="Nim">
+									<label for="signin-email" class="control-label sr-only">Email</label>
+									<input name="email" type="email" class="form-control" id="signin-email" placeholder="email">
 								</div>
 								<div class="form-group">
 									<label for="signin-password" class="control-label sr-only">Password</label>
-									<input name="password" type="password" class="form-control" id="signin-password" placeholder="Password">
+									<input name="password" type="password" class="form-control" id="signin-password" placeholder="password">
 								</div>
 								
 								<button type="submit" class="btn btn-primary btn-lg btn-block">LOGIN</button>
