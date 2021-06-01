@@ -22,3 +22,6 @@ Route::group(['middleware' => 'auth'], function(){
 });
 
 Route::get('/forum', [ForumController::class, 'index']);
+Route::post('/forum/create', [ForumController::class, 'create']);
+Route::get('/forum/{forum}/view', [ForumController::class, 'view']);
+Route::post('/forum/{forum}/view', [ForumController::class, 'postkomentar']);

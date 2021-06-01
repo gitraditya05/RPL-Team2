@@ -9,6 +9,7 @@ class Komentar extends Model
 {
     use HasFactory;
     protected $table = 'komentar';
+    protected $guarded = ['id'];
 
     public function user(){
         return $this->belongsTo(User::class);
@@ -16,5 +17,9 @@ class Komentar extends Model
 
     public function forum(){
         return $this->belongsTo(Forum::class);
+    }
+
+    public function childs(){
+        return $this->hasMany(Komentar::class, 'parent');
     }
 }

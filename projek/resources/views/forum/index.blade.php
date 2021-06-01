@@ -1,4 +1,5 @@
 @extends('layouts.master')
+@extends('forum.create')
 
 @section('content')
     <div class="main">
@@ -8,9 +9,9 @@
                     <div class="col-md-12">
                         <div class="panel">
                             <div class="panel-heading">
-                                <h3 class="panel-title">Forum</h3>
+                                <h2 class="panel-title">Forum Diskusi</h2>
                                 <div class="right">
-                                    <a href="#" class="btn btn-sm btn-primary"> Add New Post </a>
+                                    <a class="btn btn-md btn-primary" data-toggle="modal" data-target="#createModal"> Buat Post </a>
                                 </div>
                             </div>
                             <div class="panel-body">
@@ -19,7 +20,7 @@
 									<ul class="list-unstyled activity-list">
 										@foreach($forum as $frm)
                                         <li>
-											<p><a href="#">{{ $frm->user->name }}</a> {{ $frm->konten }} <span class="timestamp">{{ $frm->created_at->diffForHumans() }}</span></p>
+											<p><a href="/forum/{{$frm->id}}/view">{{ $frm->user->name }} : {{ $frm->judul }}</a> {{ $frm->konten }} <span class="timestamp">{{ $frm->created_at->diffForHumans() }}</span></p>
 										</li>
                                         @endforeach
 									</ul>

@@ -16,6 +16,7 @@ class CreateForumTable extends Migration
         Schema::create('forum', function (Blueprint $table) {
             $table->increments('id')->unique();
             $table->string('judul');
+            $table->string('slug');
             $table->text('konten');
             $table->integer('user_id');
             $table->timestamp('created_at')->useCurrent();
