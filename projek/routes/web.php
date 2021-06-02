@@ -23,19 +23,14 @@ Route::group(['middleware' => ['auth','checkRole:admin']], function(){
     
 });
 
-Route::get('/matkul', [MatkulController::class, 'index']);
-Route::get('/forum', [ForumController::class, 'index']);
-Route::post('/forum/create', [ForumController::class, 'create']);
-Route::get('/forum/{forum}/view', [ForumController::class, 'view']);
-Route::post('/forum/{forum}/view', [ForumController::class, 'postkomentar']);
+Route::group(['middleware' => ['auth','checkRole:admin,mahasiswa']], function(){
+    Route::get('/matkul', [MatkulController::class, 'index']);
 
-Route::get('/profilsaya', [ProfilController::class, 'index']);
-Route::post('/profilsaya', [ProfilController::class, 'update']);
+    Route::get('/forum', [ForumController::class, 'index']);
+    Route::post('/forum/create', [ForumController::class, 'create']);
+    Route::get('/forum/{forum}/view', [ForumController::class, 'view']);
+    Route::post('/forum/{forum}/view', [ForumController::class, 'postkomentar']);
 
-// Route::group(['middleware' => ['auth','checkRole:admin,mahasiswa']], function(){
-//     Route::get('/matkul', [MatkulController::class, 'index']);
-//     Route::get('/forum', [ForumController::class, 'index']);
-//     Route::post('/forum/create', [ForumController::class, 'create']);
-//     Route::get('/forum/{forum}/view', [ForumController::class, 'view']);
-//     Route::post('/forum/{forum}/view', [ForumController::class, 'postkomentar']);
-// });
+    Route::get('/profilsaya', [ProfilController::class, 'index']);
+    Route::post('/profilsaya', [ProfilController::class, 'update']);
+});
