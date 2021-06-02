@@ -20,7 +20,7 @@
 									<ul class="list-unstyled activity-list">
 										@foreach($forum as $frm)
                                         <li>
-											<p><a href="/forum/{{$frm->id}}/view">{{ $frm->user->name }} : {{ $frm->judul }}</a> {{ $frm->konten }} <span class="timestamp">{{ $frm->created_at->diffForHumans() }}</span></p>
+											<p><a href="/forum/{{$frm->id}}/view">{{ $frm->user->name }} : {{ $frm->judul }} <br> </a> {{ $frm->konten }} <span class="timestamp">{{ $frm->created_at->diffForHumans() }}</span></p>
 										</li>
                                         @endforeach
 									</ul>
