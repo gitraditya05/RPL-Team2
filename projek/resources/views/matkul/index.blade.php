@@ -1,9 +1,8 @@
 @extends('layouts.master')
 @extends('matkul.create')
 
-@section('matakuliah')
-    active
-@endsection
+@section('tittle') Beranda @endsection
+@section('beranda') active @endsection
 
 @section('content')
 <div class="main">
@@ -14,21 +13,21 @@
             @endif
             <div class="row">
                 <div class="col-md-12">
-                    <form class="input-group col-md-5" method="GET" action="/matkul">
+                    <form class="input-group col-md-3 center-block" method="GET" action="/matkul">
                             <input name="cari" type="text" value="" class="form-control" placeholder="Cari nama matakuliah...">
-                            <span class="input-group-btn"><button type="button" class="btn btn-primary">Cari</button></span>
+                            <span class="input-group-btn center-block"><button type="button" class="btn btn-primary">Cari</button></span>
                     </form>     
                     <div class="panel">  
                         <div class="panel-heading">
                             <h3 class="panel-title">Matakuliah</h3>
                             <div class="right">
-                                <!-- Button trigger modal -->
-                                <button type="button" class="btn" data-toggle="modal" data-target="#createModal">
-                                <i class="lnr lnr-file-add"></i></button>
+                                @if (auth()->user()->role == "admin")
+                                <a href="" class="btn btn-info btn-sm" data-toggle="modal" data-target="#createModal">Tambah</a>
+                                @endif   
                             </div>
                         </div>
                         <div class="panel-body">
-                            @foreach ($data_matkul as $d)
+                            @foreach ($data_matkul as $d)<br>
                             <div class="panel">
                                 <div class="col-md-12 btn-primary btn-lg">
                                     <div class="left">
@@ -38,16 +37,15 @@
                                         </p>
                                     </div>
                                     <div class="right">
-                                        <a href="/matkul/{{$d->id}}/cek" class="btn btn-info btn-sm">Cek</a>
+                                        <a href="/matkul/{{$d->id}}/view" class="btn btn-success btn-sm">Lihat</a>
                                         @if (auth()->user()->role == "admin")
                                             <a href="/matkul/{{$d->id}}/edit" class="btn btn-warning btn-sm">Ubah</a>
                                             <a href="/matkul/{{$d->id}}/delete" class="btn btn-danger btn-sm" 
                                                 onclick="return confirm('Yakin untuk dihapus?')">Hapus</a>                                 
-                                        @endif
-                                        
+                                        @endif                                     
                                     </div>
                                 </div>
-                            </div>
+                            </div><br/>
                             @endforeach
                         </div>
                     </div>

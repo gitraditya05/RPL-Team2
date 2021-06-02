@@ -41,7 +41,7 @@
 								</div>
 								<div class="form-group">
 									<label for="signin-password" class="control-label sr-only">Password</label>
-									<input name="password" type="password" class="form-control" id="signin-password" placeholder="password">
+									<input name="password" type="password" class="form-control" id="signin-password" placeholder="Password">
 								</div>
 								
 								<button type="submit" class="btn btn-primary btn-lg btn-block">LOGIN</button>

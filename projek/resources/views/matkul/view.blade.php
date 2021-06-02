@@ -1,7 +1,5 @@
 @extends('layouts.master')
 
-@section('tittle') Ubah Matakuliah @endsection
-
 @section('content')
 <div class="main">
     <div class="main-content">

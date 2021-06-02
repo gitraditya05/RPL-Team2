@@ -31,6 +31,12 @@ class MatkulController extends Controller
         return view('matkul/edit',['matkul'=>$matkul]);
     }
 
+    public function view($id)
+    {
+        $matkul = \App\Models\Matkul::find($id);
+        return view('matkul/view',['matkul'=>$matkul]);
+    }
+
     public function update(Request $request, $id)
     {
         $matkul = \App\Models\Matkul::find($id);

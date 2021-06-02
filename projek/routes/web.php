@@ -25,6 +25,7 @@ Route::group(['middleware' => ['auth','checkRole:admin']], function(){
 
 Route::group(['middleware' => ['auth','checkRole:admin,mahasiswa']], function(){
     Route::get('/matkul', [MatkulController::class, 'index']);
+    Route::get('/matkul/{id}/view', [MatkulController::class, 'view']);
 
     Route::get('/forum', [ForumController::class, 'index']);
     Route::post('/forum/create', [ForumController::class, 'create']);

@@ -27,9 +27,6 @@
 		<!-- NAVBAR -->
 		@include('layouts.includes._navbar')
 		<!-- END NAVBAR -->
-		<!-- LEFT SIDEBAR -->
-		@include('layouts.includes._sidebar')
-		<!-- END LEFT SIDEBAR -->
 		<!-- MAIN -->
 		@yield('content')
 		<!-- END MAIN -->
