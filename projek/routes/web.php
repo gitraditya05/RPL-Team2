@@ -14,6 +14,8 @@ use App\Http\Controllers\ProfilController;
 Route::get('/', [AuthController::class, 'login'])->name('login');
 Route::post('/postlogin', [AuthController::class, 'postlogin']);
 Route::get('/logout', [AuthController::class, 'logout']);
+Route::get('/registrasi', [AuthController::class, 'registrasi']);
+Route::post('/registrasi/create', [AuthController::class, 'postregistrasi']);
 
 Route::group(['middleware' => ['auth','checkRole:admin']], function(){
     Route::post('/matkul/create', [MatkulController::class, 'create']);

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 class AuthController extends Controller
 {
@@ -26,4 +27,30 @@ class AuthController extends Controller
         Auth::logout();
         return redirect('/');
     }
+
+    public function registrasi(){
+        return view('auth.registrasi');
+    }
+
+    public function postregistrasi(Request $request)
+    {
+        $this->validate($request, [
+            'name' => 'required',
+            'nim' => 'required',
+            'jurusan' => 'required',
+            'email' => 'required|email|unique:users',
+            'password' => 'required|min:6|confirmed'
+        ]);
+
+        User::create([
+            'name' => $request->name,
+            'nim' => $request->nim,
+            'jurusan' => $request->jurusan,
+            'email' => $request->email,
+            'password' => bcrypt($request->password)
+
+        ]);
+        return redirect('/')->with('sukses','Data berhasil ditambahkan, silahkan login!');
+    }
+
 }
