@@ -6,9 +6,16 @@ use Illuminate\Http\Request;
 
 class MatkulController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $data_matkul = \App\Models\Matkul::all();
+        if($request->has('cari'))
+        {
+            $data_matkul = \App\Models\Matkul::where('nama','LIKE','%'.$request->cari.'%')->get();
+        }
+        else
+        {
+            $data_matkul = \App\Models\Matkul::all();
+        }
         return view('matkul.index', ['data_matkul' => $data_matkul]);
     }
 
@@ -18,9 +25,23 @@ class MatkulController extends Controller
         return redirect('/matkul')->with('sukses','Data berhasil ditambahkan!');
     }
 
-    // public function edit($kode)
-    // {
-    //     $matkul = \App\Models\Matkul::find($kode);
-        
-    // }
+    public function edit($id)
+    {
+        $matkul = \App\Models\Matkul::find($id);
+        return view('matkul/edit',['matkul'=>$matkul]);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $matkul = \App\Models\Matkul::find($id);
+        $matkul->update($request->all());
+        return redirect('/matkul')->with('sukses','Data berhasil diupdate!');
+    }
+
+    public function delete($id)
+    {
+        $matkul = \App\Models\Matkul::find($id);
+        $matkul->delete($matkul);
+        return redirect('/matkul')->with('sukses', 'Data berhasil dihapus!');
+    }
 }
