@@ -33,6 +33,9 @@ Route::group(['middleware' => ['auth','checkRole:admin,mahasiswa']], function(){
     Route::post('/forum/create', [ForumController::class, 'create']);
     Route::get('/forum/{forum}/view', [ForumController::class, 'view']);
     Route::post('/forum/{forum}/view', [ForumController::class, 'postkomentar']);
+    Route::get('/forum/{id}/delete', [ForumController::class, 'delete']);
+    Route::get('/komentar/{forum_id}/delete', [ForumController::class, 'delete_komentar']);
+    Route::get('/komentar/{id}/delete2', [ForumController::class, 'delete_komentar2']);
 
     Route::get('/profilsaya', [ProfilController::class, 'index']);
     Route::post('/profilsaya', [ProfilController::class, 'update']);

@@ -28,4 +28,24 @@ class ForumController extends Controller
         $komentar = Komentar::create($request->all());
         return redirect()->back()->with('sukses', 'komentar berhasil ditambahkan');
     }
+
+    public function delete($id)
+    {
+        $komentar=Komentar::where('forum_id',$id)->delete();
+        $forum = \App\Models\Forum::find($id);
+        $forum->delete();
+        return redirect('forum')->with('sukses', 'Post berhasil dihapus!');
+    }
+
+    public function delete_komentar($forum_id)
+    {
+        $komentar=Komentar::where('forum_id',$forum_id)->delete();
+        return redirect('/forum')->with('sukses', 'Post berhasil dihapus!');
+    }
+
+    public function delete_komentar2($id)
+    {
+        $komentar=Komentar::where('id',$id)->delete();
+        return redirect('/forum')->with('sukses', 'Post berhasil dihapus!');
+    }
 }

@@ -1,7 +1,9 @@
 @extends('layouts.master')
 @extends('forum.create')
 
-@section('tittle') Forum @endsection
+
+@section('forum') active @endsection
+
 @section('content')
     <div class="main">
         <div class="main-content">
