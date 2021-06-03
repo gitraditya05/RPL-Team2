@@ -1,6 +1,9 @@
 @extends('layouts.master')
 @extends('forum.create')
 
+@section('tittle')
+    Diskusi : {{$forum->user->name}}
+@endsection
 @section('content')
     <div class="main">
         <div class="main-content">
