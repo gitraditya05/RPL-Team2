@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @extends('forum.create')
 
-@section('tittle') Forum @endsection
+
 @section('forum') active @endsection
 
 @section('content')
@@ -19,15 +19,12 @@
                             </div>
                             <div class="panel-body">
 							<!-- TIMELINE -->
-								<div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 430px;"><div class="panel-body" style="overflow: hidden; width: auto; height: 430px;">
-									<ul class="list-unstyled activity-list">
-										@foreach($forum as $frm)
-                                        <li>
-											<p><a href="/forum/{{$frm->id}}/view">{{ $frm->user->name }} : {{ $frm->judul }} <br> </a> {{ $frm->konten }} <span class="timestamp">{{ $frm->created_at->diffForHumans() }}</span></p>
-										</li>
-                                        @endforeach
-									</ul>
-								</div>
+                            @foreach($forum as $frm)
+                            <div class="panel">
+                                <p><a href="/forum/{{$frm->id}}/view">{{ $frm->user->name }} : {{ $frm->judul }} <br> 
+                                </a> {{ $frm->konten }} <br><span class="timestamp">{{ $frm->created_at->diffForHumans() }}</span></p>
+                            </div>
+                            @endforeach
 							<!-- END TIMELINE -->
 						    </div>
                             </div>

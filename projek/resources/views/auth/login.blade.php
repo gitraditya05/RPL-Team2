@@ -44,7 +44,7 @@
 									<input name="password" type="password" class="form-control" id="signin-password" placeholder="Password">
 								</div>
 								
-								<button type="submit" class="btn btn-primary btn-lg btn-block">LOGIN</button>
+								<button type="submit" class="btn btn-primary	 btn-block">LOGIN</button>
 							</form>
 							<div style="margin-top:20px;" class="text-center">
 								<p>Belum punya akun?</p>
@@ -68,3 +68,4 @@
 </body>
 
 </html>
+

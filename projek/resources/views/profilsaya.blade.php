@@ -1,8 +1,6 @@
 @extends('layouts.master')
 
-@section('title')
-Profil Saya
-@endsection
+@section('tittle') Profil Saya @endsection
 
 @section('content')
 <div class="main">
