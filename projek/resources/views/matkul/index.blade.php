@@ -12,13 +12,13 @@
             @endif
             <div class="row">
                 <div class="col-md-12">
-                    <form class="input-group col-md-3 center-block" method="GET" action="/matkul">
+                    <form class="input-group col-md-2 center-block" method="GET" action="/matkul">
                             <input name="cari" type="text" value="" class="form-control" placeholder="Cari nama matakuliah...">
                             <span class="input-group-btn center-block"><button type="button" class="btn btn-primary">Cari</button></span>
                     </form>     
                     <div class="panel">  
                         <div class="panel-heading">
-                            <h2 class="panel-title">Matakuliah</h2>
+                            <h3>Matakuliah</h3>
                             <div class="right">
                                 @if (auth()->user()->role == "admin")
                                 <a href="" class="btn btn-info btn-sm" data-toggle="modal" data-target="#createModal">Tambah</a>

@@ -30,7 +30,7 @@
 					<div class="left">
 						<div class="content">
 							<div class="header">
-								<div class="logo text-center"><img src="{{asset('admin/assets/img/tampan.png')}}" alt="Klorofil Logo"></div>
+								<div class="text-center"><h1>INFO-SC</h1></div>
 								<p class="lead">Registrasi</p>
 							</div>
 							<form class="form-auth-small" action="/registrasi/create" method="POST">

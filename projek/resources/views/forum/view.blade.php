@@ -44,17 +44,19 @@
                                     <!-- Komentar 1 -->
                                     <div class="panel-body">
                                         <!-- Isi komentar 1 -->
-                                        <a href="#">{{$komen->user->name}}</a>
-                                        @if( auth()->user()->id == $komen->user_id )
-                                                <span style="margin-left:20px;" class="dropdown top-0 end-0">
-                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
-                                                    <ul class="dropdown-menu">
-                                                        <li><a href="/komentar/{{$komen->forum_id}}/delete"> <span>Hapus</span></a></li>
-                                                    </ul>
-                                                </span>
-                                        @endif
-                                        <p>{{$komen->konten}} <span class="timestamp"> {{$komen->created_at->diffForHumans()}} </span>
-                                        <button type="button" id="btn-balas" class="btn btn-link">Balas</button></p>
+                                        <div class=" bg-info">
+                                            <a href="#">{{$komen->user->name}}</a>
+                                            @if( auth()->user()->id == $komen->user_id )
+                                                    <span style="margin-left:20px;" class="dropdown top-0 end-0">
+                                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a href="/komentar/{{$komen->forum_id}}/delete"> <span>Hapus</span></a></li>
+                                                        </ul>
+                                                    </span>
+                                            @endif
+                                            <p>{{$komen->konten}} <span class="timestamp"> {{$komen->created_at->diffForHumans()}} </span>
+                                            <button type="button" id="btn-balas" class="btn btn-primary btn-sm">Balas</button></p>
+                                        </div>
 
                                         <!-- Kolom Balas -->
                                         <form action="" method="POST" id="kolom-balas" style="padding-left : 3.5em; display:none;">
@@ -69,17 +71,16 @@
                                     <!-- Komentar 2 -->
                                     <div class="panel-body">
                                         @foreach($komen->childs as $child)
-                                            <a style="margin-top:10px; padding-left:5em;" href="#">{{$child->user->name}}</a>
-                                            @if( auth()->user()->id == $child->user_id )
-                                                <span class="dropdown top-0 end-0" style="margin-left:20px;">
-                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
-                                                    <ul class="dropdown-menu">
-                                                        <li><a href="/komentar/{{$child->id}}/delete2"> <span>Hapus</span></a></li>
-                                                    </ul>
-                                                </span>
-                                            @endif
-                                            <p style="margin-top:10px; padding-left:5em;">{{$child->konten}} <span class="timestamp"> {{$child->created_at->diffForHumans()}} </span></p>
-                                            
+                                        <a style="margin-top:10px; padding-left:5em;" href="#">{{$child->user->name}}</a>
+                                        @if( auth()->user()->id == $child->user_id )
+                                            <span class="dropdown top-0 end-0" style="margin-left:20px;">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="/komentar/{{$child->id}}/delete2"> <span>Hapus</span></a></li>
+                                                </ul>
+                                            </span>
+                                        @endif
+                                        <p style="margin-top:10px; padding-left:5em;">{{$child->konten}} <span class="timestamp"> {{$child->created_at->diffForHumans()}} </span></p>
                                         @endforeach
                                     </div>
                                 </li>
