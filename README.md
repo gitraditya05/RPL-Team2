@@ -1,10 +1,9 @@
 <br />
 <p align="center">
-<!--
+
   <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="lord_yosar/logo.jpeg" alt="Logo" width="425" height="142">
   </a>
--->
   <h3 align="center">SC-INFO</h3>
 
   <p align="center">
@@ -19,13 +18,13 @@
   <summary><h2 style="display: inline-block">Nama Anggota</h2></summary>
   <ol>
     <li>
-      Arhammirza Ibrahim (G64190007) -> Ketua, full stack, 70% yang ngerjain die
+      Arhammirza Ibrahim (G64190007) -> Ketua, full stack, tampan people
     </li>
     <li>
       Aryo Aditya (G64190008) -> back end
     </li>
     <li>Sigit Raditya Pangestu (G64190071) -> front end</li>
-    <li>Yosar Awandi Porseda (G64190076) -> pasang nama doang</li>
+    <li>Yosar Awandi Porseda (G64190076) -> emmmmm</li>
   </ol>
 </details>
 
@@ -61,15 +60,55 @@ memiliki fitur ....(fiturnya yg jadi apa aja bro?).
 Html, CSS, PHP, MySQL
 ## Hasil dan pembahasan
 ### 1. Use Case Diagram
-(gambarnya ntar diapasang)
+<br />
+<p align="center">
+
+  <a href="https://github.com/github_username/repo_name">
+    <img src="lord_yosar/User_Diagram.jpg" alt="Logo" width="581" height="401">
+  </a>
+  <p align="center">Use Case Diagram</p>
+</p>
+
+
 ### 2. Activity Diagram
-(activity diagram kita dimana ya? trello gaada)
+<br />
+<p align="center">
+
+  <a href="https://github.com/github_username/repo_name">
+    <img src="lord_yosar/activity.png" alt="Logo" width="900" height="420">
+  </a>
+  <p align="center">Activity Diagram</p>
+</p>
+
+
 ### 3. Class Diagram
-(gambarnya ntar diapasang)
+<br />
+<p align="center">
+
+  <a href="https://github.com/github_username/repo_name">
+    <img src="lord_yosar/class.png" alt="Logo" width="820" height="521">
+  </a>
+  <p align="center">Class Diagram</p>
+</p>
+
+
+
 ### 4. Entity Relationship Diagram
-(gambarnya ntar diapasang)
+lupa blum keupload :)
+
+
 ### 5. Arsitektur sistem
-(gambarnya ntar diapasang)
+<br />
+<p align="center">
+
+  <a href="https://github.com/github_username/repo_name">
+    <img src="lord_yosar/arsitektur.png" alt="Logo" width="652" height="597">
+  </a>
+  <p align="center">Arsitektur diagram</p>
+</p>
+
+
+
 ### 6. Fungsi utama yang dikembangkan
 (emmmmm)
 ### 7. Fungsi CRUD
