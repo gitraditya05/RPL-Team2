@@ -35,7 +35,7 @@
                                 <input type="hidden" name="forum_id" value="{{$forum->id}}">
                                 <input type="hidden" name="parent" value="0">
                                 <textarea name="konten" class="form-control" rows="3"></textarea>
-                                <input style="margin-top:10px;" type="submit" class="btn btn-primary" value="kirim">
+                                <input style="margin-top:10px;" type="submit" class="btn btn-primary" value="Balas">
                             </form>
                             <h4 style="margin-top:30px;">Komentar</h4>
                             <ul class="list-unstyled activity-list">
@@ -55,16 +55,15 @@
                                                     </span>
                                             @endif
                                             <p>{{$komen->konten}} <span class="timestamp"> {{$komen->created_at->diffForHumans()}} </span>
-                                            <button type="button" id="btn-balas" class="btn btn-primary btn-sm">Balas</button></p>
                                         </div>
 
                                         <!-- Kolom Balas -->
-                                        <form action="" method="POST" id="kolom-balas" style="padding-left : 3.5em; display:none;">
+                                        <form action="" method="POST" id="kolom-balas">
                                             @csrf
                                             <input type="hidden" name="forum_id" value="{{$forum->id}}">
                                             <input type="hidden" name="parent" value=" {{$komen->id}} ">
                                             <input type="text" name="konten" class="form-control">
-                                            <input style="margin-top:10px;" type="submit" class="btn btn-primary btn-xs" value="kirim">
+                                            <input style="margin-top:10px;" type="submit" class="btn btn-primary btn-xs" value="Balas">
                                         </form>
                                     </div>
                                     
@@ -100,13 +99,6 @@
         $(document).ready(function(){
             $('#btn-komentar').on('click', function(){
                 $('#komentar-utama').toggle('slide');
-            });
-        });
-    </script>
-    <script>
-        $(document).ready(function(){
-            $('#btn-balas').on('click', function(){
-                $('#kolom-balas').toggle('slide');
             });
         });
     </script>
