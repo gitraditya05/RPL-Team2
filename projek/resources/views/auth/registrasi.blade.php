@@ -30,8 +30,8 @@
 					<div class="left">
 						<div class="content">
 							<div class="header">
-								<div class="logo text-center"><img src="{{asset('admin/assets/img/logo-dark.png')}}" alt="Klorofil Logo"></div>
-								<p class="lead">Sign Up</p>
+								<div class="logo text-center"><img src="{{asset('admin/assets/img/tampan.png')}}" alt="Klorofil Logo"></div>
+								<p class="lead">Registrasi</p>
 							</div>
 							<form class="form-auth-small" action="/registrasi/create" method="POST">
                                 {{ csrf_field() }}
@@ -56,25 +56,13 @@
                                 </div>
 								<div class="form-group">
 									<label for="signin-password" class="control-label sr-only">Password</label>
-									<input name="password" type="password" class="form-control @error('password') is-invalid @enderror" id="signin-password" placeholder="password" required>
+									<input name="password" type="password" class="form-control @error('password') is-invalid @enderror" id="signin-password" placeholder="Password" required>
                                     @error('password')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
-                                <div class="form-group">
-									<label for="signin-password" class="control-label sr-only">Password</label>
-									<input name="password_confirmation" type="password" class="form-control @error('password_confirmation') is-invalid @enderror" id="signin-password" placeholder="konfirmasi password" required>
-                                    @error('password_confirmation')
-                                        <div class="alert alert-danger">{{ $message }}</div>
-                                    @enderror
-                                </div>
-								
-								<button type="submit" class="btn btn-primary btn-lg btn-block">Registrasi</button>
+								<button type="submit" class="btn btn-primary btn-sm btn-block">Registrasi</button>
 							</form>
-							<div style="margin-top:20px;" class="text-center">
-								<p>Sudah punya akun?</p>
-								<a href="/" class="btn btn-primary btn-xs" role="button" data-bs-toggle="button">Login</a>
-							</div>
 						</div>
 					</div>
 					<div class="right">

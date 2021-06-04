@@ -33,8 +33,8 @@
 		<div class="clearfix"></div>
 		<footer>
 			<div class="container-fluid">
-				<p class="copyright">Shared by <i class="fa fa-love"></i><a href="https://bootstrapthemes.co">BootstrapThemes</a>
-</p>
+				<p class="copyright">Web ini dibuat oleh <i class="fa fa-love">
+				</i><a href="https://sites.google.com/apps.ipb.ac.id/info-sc/home">Tampan People</a></p>
 			</div>
 		</footer>
 	</div>

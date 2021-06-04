@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @extends('forum.create')
 
-@section('forum') active @endsection
+@section('tittle') Diskusi : {{$forum->user->name}} @endsection
 
 @section('content')
     <div class="main">

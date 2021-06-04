@@ -2,7 +2,6 @@
 @extends('matkul.create')
 
 @section('tittle') Beranda @endsection
-@section('beranda') active @endsection
 
 @section('content')
 <div class="main">
@@ -19,7 +18,7 @@
                     </form>     
                     <div class="panel">  
                         <div class="panel-heading">
-                            <h3 class="panel-title">Matakuliah</h3>
+                            <h2 class="panel-title">Matakuliah</h2>
                             <div class="right">
                                 @if (auth()->user()->role == "admin")
                                 <a href="" class="btn btn-info btn-sm" data-toggle="modal" data-target="#createModal">Tambah</a>

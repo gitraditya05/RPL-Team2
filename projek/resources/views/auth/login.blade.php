@@ -30,21 +30,21 @@
 					<div class="left">
 						<div class="content">
 							<div class="header">
-								<div class="logo text-center"><img src="{{asset('admin/assets/img/logo-dark.png')}}" alt="Klorofil Logo"></div>
-								<p class="lead">Login to your account</p>
+								<div class="logo text-center"><img src="{{asset('admin/assets/img/tampan.png')}}" alt="Klorofil Logo"></div>
+								<p class="lead">Masuk</p>
 							</div>
 							<form class="form-auth-small" action="/postlogin" method="POST">
                                 {{ csrf_field() }}
 								<div class="form-group">
 									<label for="signin-email" class="control-label sr-only">Email</label>
-									<input name="email" type="email" class="form-control" id="signin-email" placeholder="email">
+									<input name="email" type="email" class="form-control" id="signin-email" placeholder="Email">
 								</div>
 								<div class="form-group">
 									<label for="signin-password" class="control-label sr-only">Password</label>
 									<input name="password" type="password" class="form-control" id="signin-password" placeholder="Password">
 								</div>
 								
-								<button type="submit" class="btn btn-primary	 btn-block">LOGIN</button>
+								<button type="submit" class="btn btn-primary btn-block">MASUK</button>
 							</form>
 							<div style="margin-top:20px;" class="text-center">
 								<p>Belum punya akun?</p>

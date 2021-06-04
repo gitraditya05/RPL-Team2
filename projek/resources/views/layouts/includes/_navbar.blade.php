@@ -6,8 +6,8 @@
     <div class="container-fluid">
         <div id="navbar-menu">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="/matkul" class="@yield('beranda')"><i class="lnr lnr-home"></i> <span>Beranda</span></a></li>
-                <li><a href="/forum" class="@yield('forum')"><i class="lnr lnr-users"></i> <span>Forum</span></a></li>
+                <li><a href="/matkul"><i class="lnr lnr-home"></i> <span>Beranda</span></a></li>
+                <li><a href="/forum"><i class="lnr lnr-users"></i> <span>Forum</span></a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span>{{auth()->user()->name}}</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
                     <ul class="dropdown-menu">
