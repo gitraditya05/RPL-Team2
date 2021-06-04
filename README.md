@@ -60,20 +60,20 @@ memiliki fitur ....(fiturnya yg jadi apa aja bro?).
 ### Tech Stack
 Html, CSS, PHP, MySQL
 ## Hasil dan pembahasan
-### Use Case Diagram
+### 1. Use Case Diagram
 (gambarnya ntar diapasang)
-### Activity Diagram
+### 2. Activity Diagram
 (activity diagram kita dimana ya? trello gaada)
-### Class Diagram
+### 3. Class Diagram
 (gambarnya ntar diapasang)
-### Entity Relationship Diagram
+### 4. Entity Relationship Diagram
 (gambarnya ntar diapasang)
-### Arsitektur sistem
+### 5. Arsitektur sistem
 (gambarnya ntar diapasang)
-### Fungsi utama yang dikembangkan
-(gambarnya ntar diapasang)
-### Fungsi CRUD
-(gambarnya ntar diapasang)
+### 6. Fungsi utama yang dikembangkan
+(emmmmm)
+### 7. Fungsi CRUD
+(emmmm)
 ## Hasil implementasi
 ### Screenshot sistem
 (gambarnya ntar diapasang)
