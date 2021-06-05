@@ -9,6 +9,7 @@
   <p align="center">
     Paralel 1 Kelompok 2 (Asisten Praktikum: Indah Puspita dan Qoriatul Khairunnisa)
   </p>
+  <p align="center"> Asprak : Indah Puspita, Qoriatul Khairunnisa </p>
 </p>
 
 
@@ -21,10 +22,10 @@
       Arhammirza Ibrahim (G64190007) -> Ketua, full stack, tampan people
     </li>
     <li>
-      Aryo Aditya (G64190008) -> back end
+      Aryo Aditya (G64190008) -> BackEnd
     </li>
-    <li>Sigit Raditya Pangestu (G64190071) -> front end</li>
-    <li>Yosar Awandi Porseda (G64190076) -> emmmmm</li>
+    <li>Sigit Raditya Pangestu (G64190071) -> FrontEnd</li>
+    <li>Yosar Awandi Porseda (G64190076) -> Quality Assurance (pasang nama doang sebenernya)</li>
   </ol>
 </details>
 
@@ -110,9 +111,9 @@ lupa blum keupload :)
 
 
 ### 6. Fungsi utama yang dikembangkan
-(emmmmm)
+posting, search, komen 
 ### 7. Fungsi CRUD
-(emmmm)
+
 ## Hasil implementasi
 ### Screenshot sistem
 (gambarnya ntar diapasang)
